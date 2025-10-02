@@ -1,0 +1,67 @@
+%!TEX root = ../main.tex
+
+%% Citation Styles
+% http://ctan.mirrorcatalogs.com/macros/latex/contrib/biblatex/doc/biblatex.pdf (3.3.1 Citation Styles)
+% recommended:  z.B numeric-comp, alphabetic, 
+% not recommended: authoryear, alphabetic-verb, 
+\newcommand{\quoteStyle}{alphabetic-verb}
+
+%% Fonts
+%% palatino, goudysans, lmodern or libertine
+\newcommand{\documentFont}{lmodern}
+
+%% Margin
+\newcommand{\margin}{2.5cm}
+
+%% Space between chapter headline and top of page
+\newcommand{\chapterMargin}{20pt}
+
+%% Table settings
+% Column spacing
+\newcommand{\tableColumnMargin}{10pt}
+%Line spacing
+\newcommand{\tableRowMargin}{1.5}
+
+%% Color settings
+\newcommand{\defineColors}{%
+	\definecolor{LinkColor}{HTML}{\linkColor}
+	\definecolor{ListingBackground}{HTML}{F8F8F8}
+}
+
+%% Syntax Highlighting (Listings)
+\newcommand{\listingsettings}{%
+	\lstset{%
+		aboveskip=20pt,
+		backgroundcolor=\color{ListingBackground}, % source code background color
+		basicstyle=\ttfamily\footnotesize, % the size of the fonts that are used for the code
+		breakautoindent=true,	        % indenting after break line (true, false)
+		breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+		breaklines=true,		        % break lines if necessary (true, false), sets automatic line breaking
+		captionpos=b,			% sets the caption-position to bottom
+		commentstyle=\color[rgb]{0.133,0.545,0.133}, % comment style
+		deletekeywords={...},            % if you want to delete keywords from the given language
+		escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+		extendedchars=true,		% show all Latin1 characters (true, false), lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+		firstnumber=1,                % start line enumeration with line X
+		fillcolor=\color{ListingBackground},
+		frame=single,			        % adds a frame around the code
+		frameround=ffff,
+		keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+		keywordstyle=\color[rgb]{0.133,0.133,0.6}, % keyword style
+		language=Java,			% default language
+		morekeywords={*,...},            % if you want to add more keywords to the set
+		numbers=left,			% where to put the line-numbers; possible values are (none, left, right)
+		numbersep=5pt,			% 5pt between number and source code, how far the line-numbers are from the code
+		numberstyle=\tiny,		% letter size of numbers, the style that is used for the line-numbers
+		postbreak=\space,		% break line after space
+		rulecolor=\color{darkgray},	% border color, if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+		showspaces=false,		% show spaces everywhere adding particular underscores; it overrides 'showstringspaces' (true, false)		
+		showstringspaces=false,	% underline spaces within strings only (true, false)
+		showtabs=false,                  % show tabs within strings adding particular underscores
+		stepnumber=1,			% the step between two line-numbers. If it's 1, each line will be numbered
+		stringstyle=\color[rgb]{0.627,0.126,0.941}, % string literal style
+		tabsize=2,				% sets default tabsize to 2 spaces
+		xleftmargin=10pt,		        % margin left
+		xrightmargin=5pt,		        % margin right
+	}
+}

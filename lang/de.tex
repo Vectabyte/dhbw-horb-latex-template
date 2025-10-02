@@ -1,0 +1,41 @@
+%!TEX root = ../main.tex
+
+\newcommand{\degreePhrase}{für die Prüfung zum}
+\newcommand{\lecturePhrase}{für die Vorlesung}
+\newcommand{\departmentPhrase}{des Studiengangs}
+\newcommand{\locationUniversityPhrase}{an der Dualen Hochschule Baden-Württemberg}
+\newcommand{\documentAuthorPhrase}{von}
+\newcommand{\documentPeriodPhrase}{Bearbeitungszeitraum}
+\newcommand{\matriculationNumberPhrase}{Matrikelnummer}
+\newcommand{\coursePhrase}{Kurs}
+\newcommand{\companyPhrase}{Ausbildungsbetrieb}%
+
+\newcommand{\tutorPhrase}{%
+	\IfStrEqCase{\documentType}{%
+		{T4\_1000}{Gutachter}%
+      	{T4\_2000}{Gutachter}%
+        {T4\_3000}{Gutachter}%
+      	{T4\_3100}{Gutachter}%
+      	{T4\_3300}{Erstgutachter}%
+	}[Gutachter]
+}
+
+\newcommand{\evaluatorPhrase}{Zweitgutachter}
+\newcommand{\restrictionNoticesPhrase}{Sperrvermerk}
+\newcommand{\declarationPhrase}{Erklärung}
+\newcommand{\glossaryPhrase}{Glossar}
+\newcommand{\appendixPhrase}{Anhang}
+\newcommand{\listingPhrase}{Codeausschnitt}
+\newcommand{\listListingPhrase}{Codeausschnittverzeichnis}
+\newcommand{\autrefListingPhrase}{Codeausschnitt}
+\newcommand{\acronymsPhrase}{Abkürzungsverzeichnis}
+
+\newcommand{\documentTypePhrase}{%
+  \IfStrEqCase{\documentType}{%
+      {T4\_1000}{Projektarbeit}%
+      {T4\_2000}{Projektarbeit}%
+      {T4\_3000}{Projektarbeit}%
+      {T4\_3100}{Studienarbeit}%
+      {T4\_3300}{Bachelorarbeit}%
+  }[{\documentType\ignorespaces}]
+}
