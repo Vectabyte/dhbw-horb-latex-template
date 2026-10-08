@@ -3,17 +3,30 @@
 Dieses LaTeX Template ist für alle Arbeiten der Fakultät Informatik der DHBW Stuttgart Campus Horb geeignet.
 
 **Inhalt:**
+
+* [Kompilieren](#kompilieren)
 * [Templatestruktur](#templatestruktur)
 * [Document Types](#document-types)
 * [Komponenten einer Wissenschaftlichen Arbeit](#komponenten-einer-wissenschaftlichen-arbeit)
 * [Contributors](#contributors)
 
+## Kompilieren
+
+LaTeX Workshop führt bereits bei jedem Speichern einen inkrementellen Build aus. Dafür
+ist keine eigene `.latexmkrc` erforderlich. Die Konfigurationsdatei im
+Repository wird nur für die automatische Glossarerstellung und das Auslagern
+von Hilfsdateien nach `build/` verwendet; die fertige PDF-Datei bleibt im
+Projektverzeichnis. Wenn diese Funktionen nicht
+benötigt werden, kann die Datei entfernt oder latexmk ohne sie ausgeführt
+werden.
+
 ## Templatestruktur
 
-Das Template ist im Wesentlichen in 6 Teile unterteilt:
+Das Template ist im Wesentlichen in 7 Teile unterteilt:
 
 * main.tex
 * ads/
+* build/
 * lang/
 * settings/
 * content/
@@ -31,6 +44,10 @@ Im Ordner ads befinden sich folgende vordefinierte Vorlagen, welche nicht angepa
 * Eigenständigkeitserklärung
 * Sperrvermerk
 * LaTeX Document Header
+
+### build
+
+Hier werden die Build-Dateien geschrieben, um sie gesammelt zu haben und nicht in GitHub zu synchronisieren.
 
 ### lang
 
@@ -52,6 +69,7 @@ In der Datei document.tex müssen einige Angaben über die zu schreibende Arbeit
 | documentLanguage    | Sprache der Arbeit                                    | de<br/> en      |
 | documentType        | Art der Arbeit                                        | T4\\_1000 Projektarbeit (Semester 1 & 2) <br/> T4\\_2000 Projektarbeit (Semester 3 & 4) <br/> T4\\_3000 Projektarbeit (Semester 5 & 6) <br/> T4\\_3100 Studienarbeit (Semester 5) <br/> T4\\_3300 Bachelorarbeit <br/> Für andere Arbeiten den Typ direkt eintragen|
 | restrictionNotice   | Wird ein Sperrvermerk gebraucht ? 					  | true<br/> false |
+| aiUsed   | Wurde die Arbeit mit KI-Tools unterstützt/geschrieben?| true<br/> false |
 | multipleAuthors     | Wurde die Arbeit von mehreren Autoren verfasst?       | true<br/> false |
 | documentAuthor      | Autor der Arbeit                                      |                 |
 | documentTitle       | Titel der Arbeit                                      |                 |

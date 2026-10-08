@@ -249,3 +249,6 @@ $RECYCLE.BIN/
 
 # Compile Instructions
 Compile.md
+
+# Generated build files (configured in .latexmkrc)
+build/

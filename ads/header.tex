@@ -45,6 +45,11 @@
   \IfStrEq{\restrictionNotice}{true}{#1}{#2}%
 }
 
+% ifAIUsed definition
+\newcommand{\ifAIUsed}[2]{%
+  \IfStrEq{\aiUsed}{true}{#1}{#2}%
+}
+
 % ifSpecialDocument definition
 \newcommand{\ifSpecialDocument}[2]{\IfStrEqCase{\documentType}{%
 	{T4\_1000}{#2\ignorespaces}%

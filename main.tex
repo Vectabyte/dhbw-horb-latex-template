@@ -4,7 +4,7 @@
 %%
 %% DHBW Stuttgart Campus Horb - Template for Bachelor Thesis & Project Thesis
 %%
-%% Bevor using this template please have a look at the REAMDME.md file
+%% Before using this template please have a look at the README.md file
 %%
 %% Original Template found here:
 %% https://github.com/schnes4/dhbw-heidenheim-latex-template
@@ -32,7 +32,7 @@
 	% Restriction notices
 	\ifRestrictionNotice{%
 		\ifDocType{T4\_3100}{%
-			% no restricition notices for semester paper
+			% no restriction notices for semester paper
 		}{%
 			\input{ads/restrictionNotices}
 			\newpage
@@ -50,7 +50,7 @@
     % only page number in footer
 	\pagestyle{plain}
 	
-	% space bevore chapter headline
+	% space before chapter headline
 	\RedeclareSectionCommand[beforeskip=\chapterMargin]{chapter}
 
 	% Contents
@@ -112,6 +112,10 @@
 	\appendix
 	\input{content/appendix}
 
+	% Acronyms
+	\cleardoublepage
+    \input{content/acronyms}
+
 	% Glossar
 	\cleardoublepage
 	\newpage % needed to make the next line work correctly
@@ -126,6 +130,12 @@
 	\printbibliography
 	\endgroup
 
+	\ifAIUsed{%
+		% AI Acknowledgement
+		\cleardoublepage
+		\input{content/aiacknowledgement}
+	}{}
+
 	% List of Figures
 	\cleardoublepage
 	\listoffigures
@@ -138,9 +148,5 @@
 	\cleardoublepage
 	\lstlistoflistings
 	\cleardoublepage
-
-	% Acronyms
-	\cleardoublepage
-    \input{content/acronyms}
 	
 \end{document}
